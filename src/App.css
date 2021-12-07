@@ -1,17 +1,92 @@
+html {
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid black; */
+  font-family: Arial, Helvetica, sans-serif;
+  color: gray;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.title-img {
+  height: 50px;
+  border-radius: 1rem;
+}
+
+.main-container {
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 95%;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  /* background-image: url("https://www.lobby.so/background-1.webp") 50% no-repeat; */
+  background: linear-gradient(to right, #ddddf7, #eccae8, rgb(241, 225, 200));
+}
+
 .grid {
   display: flex;
+  border-radius: 1rem;
+  /* background-color: cornflowerblue; */
+  background: linear-gradient(to right, #8380e4, #e982db, rgb(236, 202, 150));
+  /* border: 1px solid black; */
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
 
 .column {
   display: flex;
   flex-direction: column-reverse;
-  background-color: cornflowerblue;
 }
 
 .cell {
-  border: 1px solid black;
-  border-radius: 50%;
-  padding: 20px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-radius: 40%;
+  padding: 30px;
   margin: 5px;
+  background-color: white;
+  /* box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); */
+}
+
+.token {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-radius: 40%;
+  /* padding: 30px; */
+  margin: 5px;
+  background-color: white;
+  height: 60px;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+}
+
+.current {
+  height: 120px;
+  border-radius: 40%;
+  background-color: white;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+}
+
+.score-token {
+  height: 50px;
+  border-radius: 40%;
   background-color: white;
 }
