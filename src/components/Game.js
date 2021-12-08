@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import GameColumn from "./GameColumn";
+import swal from "sweetalert";
 
 function Game({
   currentPlayer,
@@ -18,14 +19,17 @@ function Game({
     const tokenPosition = column.indexOf(null);
     column[tokenPosition] = currentPlayer;
     setGameColums({ ...gameColumns, [columnIndex]: column });
-    console.log(gameColumns[columnIndex], columnIndex);
     if (currentPlayer === "a") setCurrentPlayer("b");
     if (currentPlayer === "b") setCurrentPlayer("a");
   };
 
   const checkGameOver = () => {
     if (gameOver()) {
-      alert("Game Over!");
+      swal({
+        icon: "success",
+        title: "Winner!",
+        text: "Click 'New Game' to play again",
+      });
     }
   };
 
@@ -61,7 +65,7 @@ function Game({
         }
       }
     }
-    // check if 4 diagonal up to the right
+    // check if 4 next to each other diagonal up to the right
     for (let i = 0; i < 7 - 3; i++) {
       for (let j = 0; j < 6 - 3; j++) {
         if (
@@ -77,7 +81,7 @@ function Game({
       }
     }
 
-    // check if 4 diagonal down to right
+    // check if 4 next to each other diagonal down to right
     for (let i = 0; i < 7 - 3; i++) {
       for (let j = 5; j >= 3; j--) {
         if (
@@ -97,8 +101,10 @@ function Game({
 
   return (
     <div className="grid">
-      {Object.entries(gameColumns).map(([key, col], x) => {
-        return <GameColumn col={col} onClick={() => addToken(x)} />;
+      {Object.entries(gameColumns).map(([key, col], index) => {
+        return (
+          <GameColumn col={col} key={index} onClick={() => addToken(index)} />
+        );
       })}
     </div>
   );
