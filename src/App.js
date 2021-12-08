@@ -19,7 +19,7 @@ function App() {
 
       <div className="main-container">
         <div className="player">
-          <h4>Current Player: </h4>
+          <h4>Current Player</h4>
           {currentPlayer === "a" ? (
             <img
               className="current"
