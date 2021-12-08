@@ -12,4 +12,4 @@ To run this app:
 - 'npm install' in main folder
 - 'npm start' to run the app
 
-Hope you like my app, let me know what any feedback you may have :)
+Hope you like my app, let me know any feedback you may have :)
