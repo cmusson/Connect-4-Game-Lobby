@@ -2,6 +2,10 @@ html {
   box-sizing: border-box;
 }
 
+h4 {
+  text-align: center;
+}
+
 .app {
   display: flex;
   flex-direction: column;
@@ -72,6 +76,7 @@ html {
 .player {
   display: flex;
   flex-direction: column;
+  font-size: 1.125rem;
 }
 
 .current {
@@ -83,10 +88,27 @@ html {
 .score {
   display: flex;
   align-items: center;
+  font-size: 1.125rem;
+  justify-content: center;
 }
 
 .score-token {
   height: 50px;
   border-radius: 40%;
   background-color: white;
+  margin-right: 1rem;
+}
+
+button {
+  background: linear-gradient(to right, #029df5, #fa0ec6, #fa951e);
+  border-radius: 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  color: white;
+  border: none;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }

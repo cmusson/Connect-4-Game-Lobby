@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import GameColumn from "./GameColumn";
 
-function Game({ currentPlayer, setCurrentPlayer }) {
-  let columns = [];
-  const [gameColumns, setGameColums] = useState(columns);
-
-  for (let i = 0; i < 7; i++) {
-    columns[i] = [null, null, null, null, null, null];
-  }
-
+function Game({
+  currentPlayer,
+  setCurrentPlayer,
+  gameColumns,
+  setGameColums,
+  score,
+  setScore,
+}) {
   useEffect(() => {
     checkGameOver();
   }, [gameColumns]);
@@ -24,12 +24,12 @@ function Game({ currentPlayer, setCurrentPlayer }) {
   };
 
   const checkGameOver = () => {
-    if (gameOver(currentPlayer)) {
+    if (gameOver()) {
       alert("Game Over!");
     }
   };
 
-  const gameOver = (currentPlayer) => {
+  const gameOver = () => {
     // check if 4 next to each other in a column
     for (let i = 0; i < 7; i++) {
       for (let j = 0; j < 6 - 3; j++) {
@@ -38,8 +38,11 @@ function Game({ currentPlayer, setCurrentPlayer }) {
           gameColumns[i][j] === gameColumns[i][j + 1] &&
           gameColumns[i][j + 1] === gameColumns[i][j + 2] &&
           gameColumns[i][j + 2] === gameColumns[i][j + 3]
-        )
+        ) {
+          if (currentPlayer === "a") setScore({ ...score, b: score.b + 1 });
+          else setScore({ ...score, a: score.a + 1 });
           return true;
+        }
       }
     }
 
@@ -51,8 +54,11 @@ function Game({ currentPlayer, setCurrentPlayer }) {
           gameColumns[i][j] === gameColumns[i + 1][j] &&
           gameColumns[i + 1][j] === gameColumns[i + 2][j] &&
           gameColumns[i + 2][j] === gameColumns[i + 3][j]
-        )
+        ) {
+          if (currentPlayer === "a") setScore({ ...score, b: score.b + 1 });
+          else setScore({ ...score, a: score.a + 1 });
           return true;
+        }
       }
     }
     // check if 4 diagonal up to the right
@@ -64,6 +70,8 @@ function Game({ currentPlayer, setCurrentPlayer }) {
           gameColumns[i + 1][j + 1] === gameColumns[i + 2][j + 2] &&
           gameColumns[i + 2][j + 2] === gameColumns[i + 3][j + 3]
         ) {
+          if (currentPlayer === "a") setScore({ ...score, b: score.b + 1 });
+          else setScore({ ...score, a: score.a + 1 });
           return true;
         }
       }
@@ -78,6 +86,8 @@ function Game({ currentPlayer, setCurrentPlayer }) {
           gameColumns[i + 1][j - 1] === gameColumns[i + 2][j - 2] &&
           gameColumns[i + 2][j - 2] === gameColumns[i + 3][j - 3]
         ) {
+          if (currentPlayer === "a") setScore({ ...score, b: score.b + 1 });
+          else setScore({ ...score, a: score.a + 1 });
           return true;
         }
       }
