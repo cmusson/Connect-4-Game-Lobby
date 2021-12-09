@@ -13,3 +13,5 @@ To run this app:
 - 'npm start' to run the app
 
 Hope you like my app, let me know any feedback you may have :)
+
+![image](https://user-images.githubusercontent.com/83961538/145479845-b485aee9-54f6-468c-a966-b8d94c809a0c.png)
