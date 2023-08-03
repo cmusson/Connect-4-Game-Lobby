@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Button.module.css";
+import { GameContext } from "../../context/GameContext";
 
-const Button = ({ resetBoard }) => {
+const Button = () => {
+  const { resetBoard } = useContext(GameContext);
   return <button onClick={() => resetBoard()}>New Game</button>;
 };
 

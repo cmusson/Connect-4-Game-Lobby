@@ -1,18 +1,21 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import styles from "./Game.module.css";
 import GameColumn from "../GameColumn";
+import { GameContext } from "../../context/GameContext";
 import swal from "sweetalert";
 
-function Game({
-  currentPlayer,
-  setCurrentPlayer,
-  gameColumns,
-  setGameColums,
-  score,
-  setScore,
-  resetBoard,
-}) {
+function Game() {
+  const {
+    currentPlayer,
+    setCurrentPlayer,
+    gameColumns,
+    setGameColums,
+    score,
+    setScore,
+    resetBoard,
+  } = useContext(GameContext);
+
   useEffect(() => {
     checkGameOver();
   }, [gameColumns]);

@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Score.module.css";
+import { GameContext } from "../../context/GameContext";
 
-function Score({ score }) {
+function Score() {
+  const { score } = useContext(GameContext);
   return (
     <div className={styles.container}>
       <h2>Score</h2>
