@@ -11,6 +11,7 @@ function Game({
   setGameColums,
   score,
   setScore,
+  resetBoard,
 }) {
   useEffect(() => {
     checkGameOver();
@@ -31,6 +32,8 @@ function Game({
         icon: "success",
         title: "Winner!",
         text: "Click 'New Game' to play again",
+      }).then(function () {
+        resetBoard();
       });
     }
   };

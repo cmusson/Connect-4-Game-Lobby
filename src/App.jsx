@@ -43,6 +43,7 @@ function App() {
           setGameColums={setGameColums}
           score={score}
           setScore={setScore}
+          resetBoard={resetBoard}
         />
         <Score
           currentPlayer={currentPlayer}
