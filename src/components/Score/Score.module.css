@@ -1,0 +1,17 @@
+.container {
+  border: solid red 1px;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  justify-content: center;
+}
+
+.scoreToken {
+  height: 50px;
+  border-radius: 40%;
+  background-color: white;
+  margin-right: 1rem;
+}

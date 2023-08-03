@@ -1,15 +1,16 @@
 import React from "react";
+import styles from "./GameColumn.module.css";
 
 function GameColumn({ col, onClick }) {
   return (
-    <div className="column" onClick={onClick}>
+    <div className={styles.column} onClick={onClick}>
       {col.map((cell, index) => {
         if (cell === "a") {
           return (
             <img
               key={index}
-              className="token"
-              src="https://www.lobby.so/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fcomponents%2Flayout%2Flogo.b8a48fd7046ed4ca38ec70f9a8717100.png&w=96&q=75"
+              className={styles.token}
+              src="/player1.jpeg"
               alt="logo"
             />
           );
@@ -17,12 +18,12 @@ function GameColumn({ col, onClick }) {
           return (
             <img
               key={index}
-              className="token"
-              src="https://wiki.lobby.so/icon.svg "
+              className={styles.token}
+              src="/player2.png "
               alt="logo"
             />
           );
-        } else return <div className="cell" key={index}></div>;
+        } else return <div className={styles.cell} key={index}></div>;
       })}
     </div>
   );

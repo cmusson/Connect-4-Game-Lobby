@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
-import GameColumn from "./GameColumn";
+import styles from "./Game.module.css";
+import GameColumn from "../GameColumn";
 import swal from "sweetalert";
 
 function Game({
@@ -101,7 +102,7 @@ function Game({
   };
 
   return (
-    <div className="grid">
+    <div className={styles.grid}>
       {Object.entries(gameColumns).map(([key, col], index) => {
         return (
           <GameColumn col={col} key={index} onClick={() => addToken(index)} />

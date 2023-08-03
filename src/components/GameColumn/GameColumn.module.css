@@ -1,0 +1,22 @@
+.column {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.cell {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-radius: 40%;
+  padding: 30px;
+  margin: 5px;
+  background-color: white;
+}
+
+.token {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-radius: 40%;
+  margin: 5px;
+  background-color: white;
+  height: 60px;
+}
