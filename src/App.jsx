@@ -3,6 +3,7 @@ import "./App.css";
 import Game from "./components/Game";
 import Score from "./components/Score";
 import Player from "./components/Player";
+import Button from "./components/Button/Button";
 
 function App() {
   const [starter, setStarter] = useState(true);
@@ -49,7 +50,7 @@ function App() {
           score={score}
         />
       </div>
-      <button onClick={() => resetBoard()}>New Game</button>
+      <Button resetBoard={resetBoard} />
     </div>
   );
 }
