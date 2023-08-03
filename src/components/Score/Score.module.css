@@ -1,5 +1,18 @@
 .container {
-  border: solid red 1px;
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  height: 150px;
+}
+
+.scores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
 }
 
 .score {
@@ -11,7 +24,17 @@
 
 .scoreToken {
   height: 50px;
-  border-radius: 40%;
+  border-radius: 50%;
   background-color: white;
   margin-right: 1rem;
+}
+
+@media (max-width: 800px) {
+  .scoreToken {
+    height: 25px;
+  }
+
+  .container {
+    height: 90px;
+  }
 }

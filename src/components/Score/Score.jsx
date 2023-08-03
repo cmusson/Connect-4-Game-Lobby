@@ -4,14 +4,16 @@ import styles from "./Score.module.css";
 function Score({ score }) {
   return (
     <div className={styles.container}>
-      <h4>Score</h4>
-      <div className={styles.score}>
-        <img className={styles.scoreToken} src="/player1.jpeg" alt="logo" />
-        <h4>{score["a"]}</h4>
-      </div>
-      <div className={styles.score}>
-        <img className={styles.scoreToken} src="/player2.png" alt="logo" />
-        <h4>{score["b"]}</h4>
+      <h2>Score</h2>
+      <div className={styles.scores}>
+        <div className={styles.score}>
+          <img className={styles.scoreToken} src="/player1.jpeg" alt="logo" />
+          <h2>{score["a"]}</h2>
+        </div>
+        <div className={styles.score}>
+          <img className={styles.scoreToken} src="/player2.png" alt="logo" />
+          <h2>{score["b"]}</h2>
+        </div>
       </div>
     </div>
   );

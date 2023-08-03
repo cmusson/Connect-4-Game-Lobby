@@ -1,9 +1,12 @@
 html {
   box-sizing: border-box;
+  background: linear-gradient(to right, #ddddf7, #eccae8, rgb(241, 225, 200));
 }
 
-h4 {
+h2 {
+  font-size: larger;
   text-align: center;
+  margin: 0;
 }
 
 .app {
@@ -15,26 +18,13 @@ h4 {
   color: gray;
 }
 
-.title {
-  display: flex;
-  align-items: center;
-}
-
-.title-img {
-  padding-right: 5px;
-  height: 50px;
-  border-radius: 1rem;
-}
-
 .main-container {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   width: 95%;
   border-radius: 1rem;
-  padding: 1rem;
-  margin: 1rem;
-  background: linear-gradient(to right, #ddddf7, #eccae8, rgb(241, 225, 200));
+  padding: 1rem 0 1rem 0;
 }
 
 .swal-text {
@@ -51,4 +41,16 @@ h4 {
 
 .swal-modal {
   border-radius: 1rem;
+}
+
+@media (max-width: 800px) {
+  h2 {
+    font-size: small;
+  }
+}
+
+@media (max-width: 450px) {
+  h2 {
+    font-size: smaller;
+  }
 }

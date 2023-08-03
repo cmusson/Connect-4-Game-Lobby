@@ -4,7 +4,7 @@ import styles from "./Player.module.css";
 const Player = ({ currentPlayer }) => {
   return (
     <div className={styles.player}>
-      <h4>Current Player</h4>
+      <h2>Player</h2>
       {currentPlayer === "a" ? (
         <img className={styles.current} src="/player1.jpeg" alt="logo" />
       ) : (
